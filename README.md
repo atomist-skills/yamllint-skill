@@ -56,16 +56,16 @@ integration is optional.
    To restrict the organizations or specific repositories on which the skill
    will run, you can explicitly choose organization(s) and repositories.
 
-# How to lint your Markdown files
+# How to lint your Yaml files
 
-1. **Set up the skill by providing an MarkdownLint configuration**
+1. **Set up the skill by providing an yamllint configuration**
 
 1. **Commit and push your code changes**
 
 1. **Enjoy automatic linting and fixes!**
 
-To create feature requests or bug reports, create an [issue in the repository for this skill](https://github.com/atomist-skills/markdownlint-skill/issues).
-See the [code](https://github.com/atomist-skills/markdownlint-skill) for the skill.
+To create feature requests or bug reports, create an [issue in the repository for this skill](https://github.com/atomist-skills/yamllint-skill/issues).
+See the [code](https://github.com/atomist-skills/yamllint-skill) for the skill.
 
 <!---atomist-skill-readme:end--->
 
