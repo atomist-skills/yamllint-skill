@@ -32,7 +32,7 @@ integration is optional.
 
 # How to configure
 
-1. **Specify an optional yamllint configuration in JSON format**
+1. **Specify an optional yamllint configuration**
 
     ![Configuration](docs/images/config.png)
 
