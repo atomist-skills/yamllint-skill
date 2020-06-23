@@ -1,0 +1,18 @@
+{
+  "name": "yamllint",
+  "severity": "error",
+  "report": "error",
+  "pattern": [
+    {
+      "regexp": "^([^:]*):(\\d+):(\\d+):\\s\\[([a-z]*)\\]\\s([^()]*)\\((.*)\\)$",
+      "groups": {
+        "path": 1,
+        "line": 2,
+        "column": 3,
+        "title": 6,
+        "message": 5,
+        "severity": 4
+      }
+    }
+  ]
+}
