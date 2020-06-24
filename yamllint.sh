@@ -59,8 +59,8 @@ function main () {
         return 1
     fi
     if ! cp /app/yamllint.matcher.json "$matchers_dir"; then
-        #err "Failed to copy yamllint.matcher.json to $matchers_dir"
-        #return 1
+        err "Failed to copy yamllint.matcher.json to $matchers_dir"
+        return 1
     fi
 
     # Prepare command arguments
