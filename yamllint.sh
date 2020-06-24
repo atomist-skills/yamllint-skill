@@ -87,7 +87,7 @@ function main () {
         status 0 "No errors, but one or more warnings found"
         return 0        
     else 
-        status 1 "Unkown yamllint exit code"
+        status 1 "Unknown yamllint exit code"
         return $?        
     fi
 }
