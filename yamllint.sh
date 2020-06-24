@@ -19,6 +19,13 @@ declare Version=0.1.0
 
 set -o pipefail
 
+# write status to output location.
+# usage: status CODE MESSAGE
+function status () {
+    local statusFile=${ATOMIST_STATUS:-/atm/output/status.json}
+    echo '{ "code": '$1', "reason": "'$2'" }' > "$statusFile" 
+}
+
 # print message to stdout prefixed by package name.
 # usage: msg MESSAGE
 function msg () {
@@ -29,29 +36,31 @@ function msg () {
 # usage: err MESSAGE
 function err () {
     msg "$*" 1>&2
+    status 1 "$*"
 }
 
 function main () {
     # Extract some skill configuration from the incoming event payload
+    local payload=${ATOMIST_PAYLOAD:-/atm/payload.json}
     local config branch
-    config=$( < "$ATOMIST_PAYLOAD" \
-                  jq -r '.skill.configuration.instances[0].parameters[] | select( .name == "config" ) | .value' )
+    config=$( < "$payload" \
+          jq -r '.skill.configuration.instances[0].parameters[] | select( .name == "config" ) | .value' )
     if [[ $? -ne 0 ]]; then
-        err "Failed to extract config parameter"
+        err "Failed to extract parameters from payload"
         return 1
     fi
 
     local outdir=${ATOMIST_OUTPUT_DIR:-/atm/output}
 
     # Make the problem matcher available to the runtime
-    local matcher_outdir=$outdir/matchers
-    if ! mkdir -p "$matcher_outdir"; then
-        err "Failed to create matcher output directory: $matcher_outdir"
+    local matchers_dir=${ATOMIST_MATCHERS_DIR:-$outdir/matchers}
+    if ! mkdir -p "$matchers_dir"; then
+        err "Failed to create matcher output directory: $matchers_dir"
         return 1
     fi
-    if ! cp /app/yamllint.matcher.json "$matcher_outdir"; then
-        err "Failed to copy yamllint.matcher.json to $matcher_outdir"
-        return 1
+    if ! cp /app/yamllint.matcher.json "$matchers_dir"; then
+        #err "Failed to copy yamllint.matcher.json to $matchers_dir"
+        #return 1
     fi
 
     # Prepare command arguments
@@ -67,7 +76,20 @@ function main () {
         config_option="-c $config_file"
     fi
 
-    exec yamllint $config_option -f parsable .
+    yamllint $config_option -f parsable .
+    if [ $? -eq 0 ]; then
+        status 0 "No errors or warnings found"
+        return 0
+    elif [ $? -eq 1 ]; then
+        status 0 "One or more errors found"
+        return 0
+    elif [ $? -eq 2 ]; then
+        status 0 "No errors, but one or more warnings found"
+        return 0        
+    else 
+        status 1 "Unkown yamllint exit code"
+        return $?        
+    fi
 }
 
 main "$@"

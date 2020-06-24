@@ -14,6 +14,8 @@
 #  limitations under the License.
 #
 
+---
+
 apiVersion: 1
 skill:
   name: yamllint-skill
@@ -47,8 +49,9 @@ skill:
         description: >-
           yamllint configuration in JSON format used if project does not
           contain own configuration. See the [yamllint
-          documentation](https://yamllint.readthedocs.io/en/stable/configuration.html) on how to
-          configure it.
+          documentation]
+          (https://yamllint.readthedocs.io/en/stable/configuration.html)
+          on how to configure it.
         lineStyle: multiple
         required: false
     - repoFilter:
