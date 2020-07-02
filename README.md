@@ -2,7 +2,7 @@
 
 <!---atomist-skill-description:start--->
 
-Find problems in your Yaml files
+Find problems in your YAML files
 
 <!---atomist-skill-description:end--->
 
@@ -12,7 +12,7 @@ Find problems in your Yaml files
 
 # What it's useful for
 
-Get consistency across your Yaml files.
+Get consistency across your YAML files.
 
 * Run [yamllint](https://yamllint.readthedocs.io) with the same 
 consistent configuration across all of your projects
@@ -49,7 +49,7 @@ integration is optional.
    To restrict the organizations or specific repositories on which the skill
    will run, you can explicitly choose organization(s) and repositories.
 
-# How to lint your Yaml files
+# How to lint your YAML files
 
 1. **Set up the skill by providing an yamllint configuration**
 

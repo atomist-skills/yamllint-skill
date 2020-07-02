@@ -47,7 +47,7 @@ skill:
         name: config
         displayName: Configuration
         description: >-
-          yamllint configuration in JSON format used if project does not
+          yamllint configuration used if project does not
           contain own configuration. See the [yamllint
           documentation]
           (https://yamllint.readthedocs.io/en/stable/configuration.html)

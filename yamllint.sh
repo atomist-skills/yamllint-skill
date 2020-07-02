@@ -50,6 +50,11 @@ function main () {
         return 1
     fi
 
+    # Bail if no YAML files exists in current project
+    if [[ -z $(find . -name '*.yaml' -or -name '*.yml') ]]; then 
+        exit 0
+    fi
+
     local outdir=${ATOMIST_OUTPUT_DIR:-/atm/output}
 
     # Make the problem matcher available to the runtime
