@@ -20,7 +20,7 @@ apiVersion: 1
 skill:
   name: yamllint-skill
   namespace: atomist
-  displayName: Yaml-lint
+  displayName: YAML-lint
   author: Atomist
   license: Apache-2.0
   categories:
