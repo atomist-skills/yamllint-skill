@@ -24,7 +24,6 @@ skill:
   license: Apache-2.0
   categories:
     - CODE_QUALITY
-  homepageUrl: "https://github.com/atomist-skills/yamllint-skill"
   artifacts:
     docker:
       - name: yamllint
