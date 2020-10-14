@@ -25,7 +25,6 @@ skill:
   categories:
     - CODE_QUALITY
   homepageUrl: "https://github.com/atomist-skills/yamllint-skill"
-  iconUrl: "file://docs/images/icon.svg"
   artifacts:
     docker:
       - name: yamllint
