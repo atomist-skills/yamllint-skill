@@ -44,7 +44,7 @@ function main () {
     local payload=${ATOMIST_PAYLOAD:-/atm/payload.json}
     local config branch
     config=$( < "$payload" \
-          jq -r '.skill.configuration.instances[0].parameters[] | select( .name == "config" ) | .value' )
+          jq -r '.skill.configuration.parameters[] | select( .name == "config" ) | .value' )
     if [[ $? -ne 0 ]]; then
         err "Failed to extract parameters from payload"
         return 1
