@@ -14,8 +14,8 @@ Find problems in your YAML files
 
 Get consistency across your YAML files.
 
--   Run [yamllint](https://yamllint.readthedocs.io) with the same
-    consistent configuration across all of your projects
+-   Run [yamllint](https://yamllint.readthedocs.io) with the same consistent
+    configuration across all of your projects
 -   Also supports repository-specific yamllint configurations
 -   Uses GitHub Checks with code-level annotations for linting rule violations
 
@@ -36,8 +36,10 @@ integration is optional.
 
     ![Configuration](docs/images/config.png)
 
-    Provide the [yamllint configuration](https://yamllint.readthedocs.io/en/stable/configuration.html)
-    to be used for linting when a repository does not have its own configuration.
+    Provide the
+    [yamllint configuration](https://yamllint.readthedocs.io/en/stable/configuration.html)
+    to be used for linting when a repository does not have its own
+    configuration.
 
 1. **Determine repository scope**
 
@@ -57,15 +59,15 @@ integration is optional.
 
 1. **Enjoy automatic linting and fixes!**
 
-To create feature requests or bug reports, create an [issue in the repository for this skill](https://github.com/atomist-skills/yamllint-skill/issues).
+To create feature requests or bug reports, create an
+[issue in the repository for this skill](https://github.com/atomist-skills/yamllint-skill/issues).
 See the [code](https://github.com/atomist-skills/yamllint-skill) for the skill.
 
 <!---atomist-skill-readme:end--->
 
 ---
 
-Created by [Atomist][atomist].
-Need Help? [Join our Slack workspace][slack].
+Created by [Atomist][atomist]. Need Help? [Join our Slack workspace][slack].
 
 [atomist]: https://atomist.com/ "Atomist - How Teams Deliver Software"
 [slack]: https://join.atomist.com/ "Atomist Community Slack"
