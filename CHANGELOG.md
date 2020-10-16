@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 
 -   Remove single dispatch. [238c402](https://github.com/atomist-skills/yamllint-skill/commit/238c402be02eeee38cb20a46fd847380153fcd87)
+-   Update skill category. [d994c21](https://github.com/atomist-skills/yamllint-skill/commit/d994c21076a616ae58097f6a79861cbd22b0d04c)
 
 ## [0.1.1](https://github.com/atomist-skills/yamllint-skill/compare/0.1.0...0.1.1) - 2020-07-26
 
