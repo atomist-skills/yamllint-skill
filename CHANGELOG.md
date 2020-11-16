@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased](https://github.com/atomist-skills/yamllint-skill/compare/0.2.0...HEAD)
 
+### Changed
+
+-   Update skill icon. [ec651eb](https://github.com/atomist-skills/yamllint-skill/commit/ec651eb5be86f886d67bcd463c60c9c07641ae3b)
+
 ## [0.2.0](https://github.com/atomist-skills/yamllint-skill/compare/0.1.1...0.2.0) - 2020-10-16
 
 ### Changed
