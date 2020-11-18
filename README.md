@@ -1,68 +1,81 @@
 # `atomist/yamllint-skill`
 
-<!---atomist-skill-description:start--->
+Find problems in your YAML files.
 
-Find problems in your YAML files
+:sparkles: [_**View this skill in the Atomist Skills Catalog**_][atomist-skill]
+to enable this skill on your repositories. :sparkles:
 
-<!---atomist-skill-description:end--->
+See the [Atomist website][atomist] for general information about Atomist Skills
+and the [Atomist documentation site][atomist-doc] for instructions on how to get
+started using Atomist Skills.
 
----
+[atomist-skill]:
+	https://go.atomist.com/catalog/skills/atomist/yamllint-skill
+	"Atomist Skills Catalog - Automate All Your Software Tasks"
+[atomist-doc]: https://docs.atomist.com/ "Atomist Documentation"
 
-<!---atomist-skill-readme:start--->
+## Contributing
 
-# What it's useful for
+Contributions to this project from community members are encouraged and
+appreciated. Please review the [Contributing Guidelines](CONTRIBUTING.md) for
+more information. Also see the [Development](#development) section in this
+document.
 
-Get consistency across your YAML files.
+## Code of conduct
 
--   Run [yamllint](https://yamllint.readthedocs.io) with the same consistent
-    configuration across all of your projects
--   Also supports repository-specific yamllint configurations
--   Uses GitHub Checks with code-level annotations for linting rule violations
+This project is governed by the [Code of Conduct](CODE_OF_CONDUCT.md). You are
+expected to act in accordance with this code by participating. Please report any
+unacceptable behavior to code-of-conduct@atomist.com.
 
-# Before you get started
+## Connect
 
-Connect and configure these integrations:
+Follow [@atomist][atomist-twitter] on Twitter and [The Atomist
+Blog][atomist-blog].
 
-1. **GitHub** _(required)_
+[atomist-twitter]: https://twitter.com/atomist "Atomist on Twitter"
+[atomist-blog]: https://blog.atomist.com/ "The Atomist Blog"
 
-# How to configure
+## Support
 
-1. **Specify an optional yamllint configuration**
+General support questions should be discussed in the `#support` channel in the
+[Atomist community Slack workspace][slack].
 
-    ![Configuration](docs/images/config.png)
+If you find a problem, please create an [issue](../../issues).
 
-    Provide the
-    [yamllint configuration](https://yamllint.readthedocs.io/en/stable/configuration.html)
-    to be used for linting when a repository does not have its own
-    configuration.
+## Development
 
-1. **Determine repository scope**
+You will need to install [Node.js][node] to build and test this project.
 
-    ![Repository filter](docs/images/repo-filter.png)
+[node]: https://nodejs.org/ "Node.js"
 
-    By default, this skill will be enabled for all repositories in all
-    organizations you have connected.
+### Build and test
 
-    To restrict the organizations or specific repositories on which the skill
-    will run, you can explicitly choose organization(s) and repositories.
+Install dependencies.
 
-# How to lint your YAML files
+```
+$ npm ci
+```
 
-1. **Set up the skill by providing an yamllint configuration**
+Use the `build` package script to compile, test, lint, and build the
+documentation.
 
-1. **Commit and push your code changes**
+```
+$ npm run build
+```
 
-1. **Enjoy automatic linting and fixes!**
+### Release
 
-To create feature requests or bug reports, create an
-[issue in the repository for this skill](https://github.com/atomist-skills/yamllint-skill/issues).
-See the [code](https://github.com/atomist-skills/yamllint-skill) for the skill.
+Releases are created by pushing a release [semantic version][semver] tag to the
+repository, Atomist Skills take care of the rest.
 
-<!---atomist-skill-readme:end--->
+To make this skill globally available, set its maturity to "stable" via the set
+maturity drop-down in its Atomist Community Slack channel.
+
+[semver]: https://semver.org/ "Semantic Version"
 
 ---
 
 Created by [Atomist][atomist]. Need Help? [Join our Slack workspace][slack].
 
-[atomist]: https://atomist.com/ "Atomist - How Teams Deliver Software"
+[atomist]: https://atomist.com/ "Atomist - Automate All the Software Things"
 [slack]: https://join.atomist.com/ "Atomist Community Slack"
