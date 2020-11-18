@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 -   Update skill icon. [ec651eb](https://github.com/atomist-skills/yamllint-skill/commit/ec651eb5be86f886d67bcd463c60c9c07641ae3b)
 
+### Removed
+
+-   Remove unused chat provider. [992b22c](https://github.com/atomist-skills/yamllint-skill/commit/992b22ced2bd27c4f9fd4c91679c24f4e03aedfc)
+
 ## [0.2.0](https://github.com/atomist-skills/yamllint-skill/compare/0.1.1...0.2.0) - 2020-10-16
 
 ### Changed
