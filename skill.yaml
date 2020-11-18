@@ -33,20 +33,14 @@ skill:
       typeName: GitHubAppResourceProvider
       description: GitHub
       minRequired: 1
-    - name: slack
-      displayName: Chat
-      typeName: ChatProvider
-      description: Chat
-      minRequired: 0
   parameters:
     - string:
         name: config
         displayName: Configuration
         description: >-
           yamllint configuration used if project does not
-          contain own configuration. See the [yamllint
-          documentation]
-          (https://yamllint.readthedocs.io/en/stable/configuration.html)
+          contain own configuration. See the
+          [yamllint documentation](https://yamllint.readthedocs.io/en/stable/configuration.html)
           on how to configure it.
         lineStyle: multiple
         required: false
