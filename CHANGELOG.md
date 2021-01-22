@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased](https://github.com/atomist-skills/yamllint-skill/compare/1.0.0...HEAD)
 
+### Fixed
+
+-   Yamllint fails to find module when running under gVisor. [#6](https://github.com/atomist-skills/yamllint-skill/issues/6)
+
 ## [1.0.0](https://github.com/atomist-skills/yamllint-skill/compare/0.2.0...1.0.0) - 2020-11-18
 
 ### Changed
